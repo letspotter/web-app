@@ -1,216 +1,634 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Spotter — Find. Match. Train.</title>
-    <meta
-      name="description"
-      content="Yakınında antrenman partneri bul. Spor, hedef ve programa göre eşleş — birlikte antrenman yap. Dating değil."
-    />
-    <link rel="icon" href="assets/favicon.png" />
-    <link rel="canonical" href="https://letspotter.com/" />
-    <meta property="og:title" content="Spotter — Find. Match. Train." />
-    <meta
-      property="og:description"
-      content="Fitness partner matching. Not a dating app."
-    />
-    <meta property="og:image" content="assets/icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="glow glow-a" aria-hidden="true"></div>
-    <div class="glow glow-b" aria-hidden="true"></div>
 
-    <header class="nav">
-      <a class="brand" href="#top">
-        <img src="assets/icon.png" alt="" width="36" height="36" />
-        <span>SPOTTER</span>
-      </a>
-      <nav>
-        <a href="#how" data-i="nav.how">Nasıl çalışır</a>
-        <a href="#app" data-i="nav.app">Uygulama</a>
-        <a href="#faq" data-i="nav.faq">SSS</a>
-      </nav>
-      <div class="nav-end">
-        <button class="lang" type="button" id="lang-toggle" aria-label="Language">
-          EN
-        </button>
-        <a class="btn btn-sm" href="#download" data-i="nav.cta">Uygulamayı al</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spotter Uygulaması: Yakınında Antrenman Arkadaşı Bul</title>
+  <meta name="description"
+    content="Yakınındaki sporcularla eşleş, spor ve programına uygun antrenman arkadaşı bul. Birlikte spor yap, motivasyonunu koru. Spotter tanışma uygulaması değil." />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="canonical" href="https://letspotter.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Spotter" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:url" content="https://letspotter.com/" />
+  <meta property="og:title" content="Spotter Uygulaması: Yakınında Antrenman Arkadaşı Bul" />
+  <meta property="og:description"
+    content="Yakınındaki sporcularla eşleş, spor ve programına uygun antrenman arkadaşı bul. Birlikte spor yap, motivasyonunu koru. Spotter tanışma uygulaması değil." />
+  <meta property="og:image" content="https://letspotter.com/assets/og.jpg" />
+  <meta property="og:image:alt" content="Spotter eşleşmeler ekranı" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Spotter Uygulaması: Yakınında Antrenman Arkadaşı Bul" />
+  <meta name="twitter:description"
+    content="Yakınındaki sporcularla eşleş, spor ve programına uygun antrenman arkadaşı bul. Birlikte spor yap, motivasyonunu koru. Spotter tanışma uygulaması değil." />
+  <meta name="twitter:image" content="https://letspotter.com/assets/og.jpg" />
+  <meta name="twitter:image:alt" content="Spotter eşleşmeler ekranı" />
+  <link rel="preload" as="image" type="image/webp" href="assets/messages-430.webp" fetchpriority="high" />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=optional"
+    rel="stylesheet"
+  />
+  <style>
+    html { background: #0a0a0b; }
+    body { margin: 0; background: #0a0a0b; color: #f4f4f0; }
+    .nav { min-height: 72px; }
+    .phone { aspect-ratio: 430 / 932; background: #000; }
+    h1 {
+      font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+      font-size: clamp(56px, 10vw, 112px);
+      line-height: 0.95;
+      margin: 12px 0 18px;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var l = localStorage.getItem("spotter-lang");
+      if (l === "en" || l === "tr") document.documentElement.lang = l;
+    })();
+  </script>
+  <script src="i18n.js" defer></script>
+  <script type="application/ld+json" id="schema-graph">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://letspotter.com/#org",
+            "name": "LetSpotter",
+            "url": "https://letspotter.com",
+            "email": "hello@letspotter.com",
+            "logo": "https://letspotter.com/assets/icon-192.png"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://letspotter.com/#website",
+            "url": "https://letspotter.com/",
+            "name": "Spotter",
+            "inLanguage": ["tr", "en"],
+            "publisher": { "@id": "https://letspotter.com/#org" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://letspotter.com/#webpage",
+            "url": "https://letspotter.com/",
+            "name": "Spotter Uygulaması: Yakınında Antrenman Arkadaşı Bul",
+            "description": "Yakınındaki sporcularla eşleş, spor ve programına uygun antrenman arkadaşı bul. Birlikte spor yap, motivasyonunu koru. Spotter tanışma uygulaması değil.",
+            "inLanguage": "tr",
+            "isPartOf": { "@id": "https://letspotter.com/#website" },
+            "about": { "@id": "https://letspotter.com/#app" }
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://letspotter.com/#app",
+            "name": "Spotter",
+            "alternateName": "Spotter Fitness",
+            "operatingSystem": "iOS",
+            "applicationCategory": "HealthApplication",
+            "applicationSubCategory": "SocialNetworkingApplication",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "inLanguage": ["tr", "en"],
+            "description": "Yakınındaki sporcularla spor, hedef ve programa göre eşleş; antrenman arkadaşı bul ve birlikte spor yap.",
+            "url": "https://letspotter.com",
+            "image": "https://letspotter.com/assets/icon-192.png",
+            "screenshot": [
+              "https://letspotter.com/assets/matches-860.webp",
+              "https://letspotter.com/assets/messages-860.webp",
+              "https://letspotter.com/assets/profile-860.webp",
+              "https://letspotter.com/assets/settings-860.webp"
+            ],
+            "featureList": [
+              "Yakındaki sporcuları keşfet",
+              "Spor, hedef ve program eşleşmesi",
+              "Karşılıklı beğeniden sonra sohbet",
+              "Filtreler ve bildirim tercihleri"
+            ],
+            "publisher": { "@id": "https://letspotter.com/#org" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://letspotter.com/#faq",
+            "inLanguage": "tr",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Tanışma uygulaması mı?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hayır. Spotter spor ve antrenman arkadaşlığı içindir. Odak: spor, hedef, program ve sağlık."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kimler için?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "18 yaşını doldurmuş, aktif spor yapan veya spora başlamak isteyen yetişkinler."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Konum neden gerekir?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keşfet yakındaki adayları gösterir; birlikte antrenman fiziksel yakınlık ister. Konum reklam için kullanılmaz."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Bölgede kimse yoksa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Davet bağlantısıyla arkadaşlarını çağırabilirsin. Yoğunluk gerçek kullanıcılardan gelir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Verilerim güvende mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hesap, profil ve sohbet verisi uygulama sunucularında tutulur. Üçüncü taraf reklam ağı yok."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+</head>
+
+<body>
+  <div class="glow glow-a" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top">
+      <img src="assets/logo-72.png" alt="Spotter" width="36" height="36" />
+      <span>SPOTTER</span>
+    </a>
+    <nav>
+      <a href="#how" data-i="nav.how">Nasıl çalışır</a>
+      <a href="#sports" data-i="nav.sports">Sporlar</a>
+      <a href="#app" data-i="nav.app">Uygulama</a>
+      <a href="#trust" data-i="nav.trust">Güven</a>
+      <a href="#faq" data-i="nav.faq">SSS</a>
+    </nav>
+    <div class="nav-end">
+      <button class="lang" type="button" id="lang-toggle" data-i-aria="lang.aria" aria-label="Dil">
+        EN
+      </button>
+      <a class="btn btn-sm" href="#download" data-i="nav.cta">Uygulamayı al</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow" data-i="hero.eyebrow">Fitness topluluğu · sosyal spor</p>
+      <h1 data-i="hero.title">Keşfet. Eşleş. Antrenman yap.</h1>
+      <p class="lede" data-i="hero.lede">
+        Tek başına spor sıkıcı geliyorsa Spotter, aynı sporları, hedefleri ve
+        programı paylaşan insanlarla seni buluşturur. Motivasyon ve disiplin
+        için birlikte antrenman yaparsınız. Tanışma uygulaması değil —
+        antrenman arkadaşlığı.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#download" data-i="hero.cta">App Store’da yakında</a>
+        <a class="btn btn-ghost" href="#how" data-i="hero.secondary">Nasıl çalışır</a>
       </div>
-    </header>
+      <p class="not-dating" data-i="hero.notDating">
+        Spotter bir dating uygulaması değildir. Odak: fitness ve antrenman partneri.
+      </p>
 
-    <main id="top">
-      <section class="hero">
-        <p class="eyebrow" data-i="hero.eyebrow">Fitness partner matching</p>
-        <h1>Find. Match. Train.</h1>
-        <p class="lede" data-i="hero.lede">
-          Tek başına spor sıkıcı geliyorsa Spotter, aynı sporları, hedefleri ve
-          programı paylaşan insanlarla seni buluşturur. Dating değil —
-          antrenman arkadaşlığı.
-        </p>
-        <div class="hero-actions">
-          <a class="btn" href="#download" data-i="hero.cta">App Store’da yakında</a>
-          <a class="btn btn-ghost" href="#how" data-i="hero.secondary">Nasıl çalışır</a>
-        </div>
-        <p class="not-dating" data-i="hero.notDating">
-          Spotter bir dating uygulaması değildir.
-        </p>
+      <div class="phones">
+        <figure class="phone phone-left">
+          <img
+            src="assets/matches-430.webp"
+            srcset="assets/matches-430.webp 430w, assets/matches-860.webp 860w"
+            sizes="(max-width: 860px) 0px, 280px"
+            alt=""
+            width="430"
+            height="932"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <figure class="phone phone-center">
+          <img
+            src="assets/messages-430.webp"
+            srcset="assets/messages-430.webp 430w, assets/messages-860.webp 860w"
+            sizes="(max-width: 860px) 280px, 360px"
+            alt=""
+            width="430"
+            height="932"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </figure>
+        <figure class="phone phone-right">
+          <img
+            src="assets/profile-430.webp"
+            srcset="assets/profile-430.webp 430w, assets/profile-860.webp 860w"
+            sizes="(max-width: 860px) 0px, 280px"
+            alt=""
+            width="430"
+            height="932"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </section>
 
-        <div class="phones" aria-hidden="true">
-          <figure class="phone phone-left">
-            <img src="assets/matches.png" alt="" />
-          </figure>
-          <figure class="phone phone-center">
-            <img src="assets/messages.png" alt="" />
-          </figure>
-          <figure class="phone phone-right">
-            <img src="assets/profile.png" alt="" />
-          </figure>
-        </div>
-      </section>
+    <section class="story" id="about">
+      <h2 data-i="story.title">Tek başına spor yetmiyorsa</h2>
+      <p data-i="story.p1">
+        Tek başına spor sıkıcı geliyorsa Spotter, aynı sporları, hedefleri ve
+        programı paylaşan insanlarla seni buluşturur. Bu cümle ürünün özüdür:
+        doğru insan, doğru saat, doğru salon.
+      </p>
+      <p data-i="story.p2">
+        Birçok kişi salona üye olur, birkaç hafta gider, sonra program bozulur.
+        Arkadaşların mesaisi uymaz; gruplarda seviye belirsizdir. Spotter’da
+        profilin sporlarını, seviyeni, hedeflerini ve müsait olduğun günleri
+        taşır. Keşfet bu bilgilere ve konuma göre yakındaki sporcuları gösterir.
+      </p>
+      <p data-i="story.p3">
+        Eşleşme karşılıklıdır. Birini beğenirsin; o da seni beğenirse sohbet
+        açılır. Mesajlar antrenmanı planlamak içindir: nerede, kaçta, hangi
+        tempo. İlk buluşmayı kamuya açık bir yerde yapmanı öneririz. İstemezsen
+        eşleşmeyi kaldırabilir, kişiyi engelleyebilir veya raporlayabilirsin.
+      </p>
+      <p data-i="story.p4">
+        Spotter tanışma uygulaması değildir. Odak sağlık, motivasyon, disiplin
+        ve performans artışıdır. Fitness, koşu, yoga, boks, bisiklet veya saha
+        sporları: kartında ne yazıyorsa ona göre eşleşirsin. Bölgede kimse yoksa
+        davet bağlantısıyla gerçek insanları çağırırsın; sahte hesap doldurulmaz.
+      </p>
+    </section>
 
-      <section class="steps" id="how">
-        <h2 data-i="how.title">Üç adım</h2>
-        <div class="step-grid">
-          <article>
-            <span>01</span>
-            <h3 data-i="how.find.title">Find</h3>
-            <p data-i="how.find.body">
-              Konumuna, sporlarına ve müsaitliğine göre yakındaki sporcuları
-              keşfet. Pass veya Fit.
-            </p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3 data-i="how.match.title">Match</h3>
-            <p data-i="how.match.body">
-              Karşılıklı Fit olunca It’s a Fit. Sohbet açılır; antrenmanı
-              birlikte planlayın.
-            </p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3 data-i="how.train.title">Train</h3>
-            <p data-i="how.train.body">
-              Salonda veya açık havada, seviyen ve hedeflerin uyan biriyle
-              çalış.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="features" id="app">
-        <div class="feature">
-          <div class="feature-copy">
-            <p class="kicker" data-i="f1.kicker">Eşleşmeler</p>
-            <h2 data-i="f1.title">Seni Fit’leyenler ve yeni eşleşmeler</h2>
-            <p data-i="f1.body">
-              Gelen Fit’leri gör, yeni eşleşmelere selam ver. Motivasyon
-              tek başına değil — birlikte antrenman için kapı açık.
-            </p>
-          </div>
-          <figure class="phone">
-            <img src="assets/matches.png" alt="Spotter eşleşmeler ekranı" />
-          </figure>
-        </div>
-
-        <div class="feature feature-flip">
-          <div class="feature-copy">
-            <p class="kicker" data-i="f2.kicker">Mesajlar</p>
-            <h2 data-i="f2.title">Karşılıklı Fit sonrası anlık sohbet</h2>
-            <p data-i="f2.body">
-              Saat, salon, tempo. Sohbet yalnızca eşleşince açılır — odak
-              antrenmanı planlamak.
-            </p>
-          </div>
-          <figure class="phone">
-            <img src="assets/messages.png" alt="Spotter mesajlar ekranı" />
-          </figure>
-        </div>
-
-        <div class="feature">
-          <div class="feature-copy">
-            <p class="kicker" data-i="f3.kicker">Profil</p>
-            <h2 data-i="f3.title">Spor, hedef, program, fotoğraf</h2>
-            <p data-i="f3.body">
-              1–6 fotoğraf, sporlar ve seviyeler, hedefler ve müsait
-              olduğun saatler. Filtrelerle mesafeyi, yaşı ve sporu daralt.
-            </p>
-          </div>
-          <figure class="phone">
-            <img src="assets/profile.png" alt="Spotter profil düzenleme ekranı" />
-          </figure>
-        </div>
-
-        <div class="feature feature-flip">
-          <div class="feature-copy">
-            <p class="kicker" data-i="f4.kicker">Kontrol sende</p>
-            <h2 data-i="f4.title">Dil, bildirimler, gizlilik</h2>
-            <p data-i="f4.body">
-              Türkçe veya English. Fit, match, mesaj ve yakındakiler
-              bildirimlerini ayrı ayrı açıp kapat.
-            </p>
-          </div>
-          <figure class="phone">
-            <img src="assets/settings.png" alt="Spotter ayarlar ekranı" />
-          </figure>
-        </div>
-      </section>
-
-      <section class="faq" id="faq">
-        <h2 data-i="faq.title">Sık sorulanlar</h2>
-        <details open>
-          <summary data-i="faq.q1">Dating uygulaması mı?</summary>
-          <p data-i="faq.a1">
-            Hayır. Spotter fitness ve antrenman arkadaşlığı içindir. Odak:
-            spor, hedef ve program uyumu.
+    <section class="problem">
+      <h2 data-i="problem.title">Neden Spotter?</h2>
+      <p class="section-lede" data-i="problem.lede">
+        Birçok kişi salona gider ama düzenli bir partner bulamaz. Arkadaşların
+        programı uymaz; sosyal medya gruplarında seviye ve hedef belirsizdir.
+        Spotter bu boşluğu kapatır.
+      </p>
+      <div class="card-grid">
+        <article>
+          <h3 data-i="problem.p1.title">Motivasyon düşmesin</h3>
+          <p data-i="problem.p1.body">
+            Birinin seni beklediğini bilmek, antrenmanı ertelemeyi zorlaştırır.
+            Sosyal spor, tek başına yapılan seanslardan daha sürdürülebilir
+            olur.
           </p>
-        </details>
-        <details>
-          <summary data-i="faq.q2">Kimler için?</summary>
-          <p data-i="faq.a2">
-            Aktif spor yapan veya spora başlamak isteyen yetişkinler.
-            Fitness, koşu, yoga, dövüş sporları ve daha fazlası.
+        </article>
+        <article>
+          <h3 data-i="problem.p2.title">Disiplin ve performans</h3>
+          <p data-i="problem.p2.body">
+            Benzer seviyede bir partnerle tempo, set ve hedef netleşir.
+            Performans artışı çoğu zaman yalnız çalışmaktan değil, hesap
+            verebilirlikten gelir.
           </p>
-        </details>
-        <details>
-          <summary data-i="faq.q3">Konum neden gerekir?</summary>
-          <p data-i="faq.a3">
-            Keşfet yakındaki adayları gösterir. Konum yalnızca bu işlev
-            için kullanılır; reklam takibi yoktur.
+        </article>
+        <article>
+          <h3 data-i="problem.p3.title">Sağlık ve topluluk</h3>
+          <p data-i="problem.p3.body">
+            Yeni şehir, yeni salon veya yeni bir spor dalı: fitness
+            topluluğuna bağlanmak, hem sağlık hem sosyal çevre için işe yarar.
+            Grup antrenmanı da, ikili çalışma da mümkün.
           </p>
-        </details>
-      </section>
+        </article>
+      </div>
+    </section>
 
-      <section class="download" id="download">
-        <h2 data-i="dl.title">Birlikte antrenman yap.</h2>
-        <p data-i="dl.body">
-          iOS sürümü App Store’da. Android yolda.
+    <section class="steps" id="how">
+      <h2 data-i="how.title">Nasıl çalışır</h2>
+      <p class="section-lede" data-i="how.lede">
+        Üç adım: profilini kur, yakındaki sporcuları keşfet, karşılıklı
+        ilgi olunca sohbet et ve antrenmanı planla.
+      </p>
+      <div class="step-grid">
+        <article>
+          <span>01</span>
+          <h3 data-i="how.find.title">Keşfet</h3>
+          <p data-i="how.find.body">
+            Konumuna, sporlarına ve müsaitliğine göre yakındaki sporcuları
+            gör. Uymayanı geç (Pass), uyanı Fit ile işaretle.
+          </p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3 data-i="how.match.title">Eşleş</h3>
+          <p data-i="how.match.body">
+            İkiniz de Fit atınca eşleşme oluşur. Tek taraflı beğeni sohbet
+            açmaz; karşılıklılık kuralı nettir.
+          </p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3 data-i="how.train.title">Antrenman</h3>
+          <p data-i="how.train.body">
+            Salonda, parkurda veya açık havada buluşun. İlk buluşmayı kamuya
+            açık yerde planlamanızı öneririz.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="journey" id="journey">
+      <h2 data-i="journey.title">Uygulama içinde ne beklemelisin</h2>
+      <div class="journey-grid">
+        <article>
+          <h3 data-i="journey.profile.title">1. Profil oluşturma</h3>
+          <p data-i="journey.profile.body">
+            Kayıt (e-posta veya Google) sonrası onboarding: 1–6 fotoğraf
+            (ilki kapak), isim, cinsiyet, bio, sporlar ve seviyeler
+            (başlangıç / orta / ileri), hedefler ve haftalık müsaitlik.
+            Konum izni Keşfet için gerekir. Yaş sınırı 18.
+          </p>
+        </article>
+        <article>
+          <h3 data-i="journey.match.title">2. Eşleşme süreci</h3>
+          <p data-i="journey.match.body">
+            Keşfet kartlarında Pass veya Fit. Filtrelerle mesafe, yaş,
+            cinsiyet tercihi, spor ve saat aralığını daraltırsın. Biri seni
+            Fit’lediğinde bildirim alırsın. Karşılıklı Fit olunca eşleşmeler
+            listesinde görünür; henüz yazılmamış yeni eşleşmelere selam
+            verebilirsin.
+          </p>
+        </article>
+        <article>
+          <h3 data-i="journey.chat.title">3. Sohbet</h3>
+          <p data-i="journey.chat.body">
+            Mesajlar yalnızca eşleşmeden sonra açılır. Konu: saat, salon,
+            tempo — antrenmanı planlamak. Anlık (realtime) sohbet. İstersen
+            eşleşmeyi kaldırabilir, kişiyi engelleyebilir veya
+            raporlayabilirsin.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="sports" id="sports">
+      <h2 data-i="sports.title">Hangi sporlar</h2>
+      <p class="section-lede" data-i="sports.lede">
+        Spotter tek bir branşa kilitli değil. Aynı salonu, aynı parkuru veya
+        aynı minderi arayan insanları bir araya getirir.
+      </p>
+      <div class="sport-grid">
+        <article>
+          <h3 data-i="sports.fitness.title">Fitness &amp; vücut geliştirme</h3>
+          <p data-i="sports.fitness.body">
+            Kas, güç, kilo kontrolü. Spotter’ın klasik kullanımı: salonda
+            birlikte çalışan bir partner.
+          </p>
+        </article>
+        <article>
+          <h3 data-i="sports.running.title">Koşu &amp; bisiklet</h3>
+          <p data-i="sports.running.body">
+            Tempo, mesafe ve sabah/akşam programı uyumu. Parkur veya yol
+            antrenmanı için eş.
+          </p>
+        </article>
+        <article>
+          <h3 data-i="sports.yoga.title">Yoga &amp; pilates</h3>
+          <p data-i="sports.yoga.body">
+            Stüdyo veya ev seansı. Esneklik ve düzenli pratik için aynı
+            saatte gidecek biri.
+          </p>
+        </article>
+        <article>
+          <h3 data-i="sports.combat.title">Boks &amp; dövüş sporları</h3>
+          <p data-i="sports.combat.body">
+            Pad work, sparring veya teknik. Seviyeni belirt; benzer
+            deneyimdeki partnerleri gör.
+          </p>
+        </article>
+        <article>
+          <h3 data-i="sports.func.title">CrossFit &amp; calisthenics</h3>
+          <p data-i="sports.func.body">
+            WOD, barfiks, park. Yoğun seanslarda motivasyonu yüksek tutacak
+            bir eş.
+          </p>
+        </article>
+        <article>
+          <h3 data-i="sports.team.title">Yüzme, tenis, basket, futbol</h3>
+          <p data-i="sports.team.body">
+            Kort, havuz veya saha. Grup antrenmanı veya ikili çalışma — spor
+            kartında ne yazıyorsa ona göre eşleşirsin.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="features" id="app">
+      <div class="feature">
+        <div class="feature-copy">
+          <p class="kicker" data-i="f1.kicker">Eşleşmeler</p>
+          <h2 data-i="f1.title">Kim Fit attı, kimle eşleştin</h2>
+          <p data-i="f1.body">
+            Gelen Fit’ler ayrı bir listede durur; henüz yazılmamış
+            eşleşmelerde “Selam ver” ile sohbeti başlatırsın. Motivasyon tek
+            başına kalmasın diye eşleşmeyi görünür ve hızlı tutuyoruz.
+          </p>
+        </div>
+        <figure class="phone">
+          <img
+            src="assets/matches-430.webp"
+            srcset="assets/matches-430.webp 430w, assets/matches-860.webp 860w"
+            sizes="(max-width: 860px) 280px, 320px"
+            data-i-alt="alt.matches"
+            alt="Spotter eşleşmeler ekranı"
+            width="430"
+            height="932"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+
+      <div class="feature feature-flip">
+        <div class="feature-copy">
+          <p class="kicker" data-i="f2.kicker">Mesajlar</p>
+          <h2 data-i="f2.title">Eşleşmeden sonra anlık sohbet</h2>
+          <p data-i="f2.body">
+            Saat, salon, tempo. Sohbet yalnızca karşılıklı Fit sonrası açılır.
+            Odak flört değil; antrenmanı planlamak ve performansı birlikte
+            artırmak.
+          </p>
+        </div>
+        <figure class="phone">
+          <img
+            src="assets/messages-430.webp"
+            srcset="assets/messages-430.webp 430w, assets/messages-860.webp 860w"
+            sizes="(max-width: 860px) 280px, 320px"
+            data-i-alt="alt.messages"
+            alt="Spotter mesajlar ekranı"
+            width="430"
+            height="932"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+
+      <div class="feature">
+        <div class="feature-copy">
+          <p class="kicker" data-i="f3.kicker">Profil</p>
+          <h2 data-i="f3.title">Spor, hedef, program, fotoğraf</h2>
+          <p data-i="f3.body">
+            En fazla altı fotoğraf; ilki kapak. Sporlar ve seviyeler,
+            hedefler (kas, kilo, kondisyon, yarışma, tempo…) ve hangi gün
+            hangi saatte müsait olduğun. Filtrelerle mesafeyi, yaşı ve sporu
+            daraltırsın.
+          </p>
+        </div>
+        <figure class="phone">
+          <img
+            src="assets/profile-430.webp"
+            srcset="assets/profile-430.webp 430w, assets/profile-860.webp 860w"
+            sizes="(max-width: 860px) 280px, 320px"
+            data-i-alt="alt.profile"
+            alt="Spotter profil düzenleme ekranı"
+            width="430"
+            height="932"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+
+      <div class="feature feature-flip">
+        <div class="feature-copy">
+          <p class="kicker" data-i="f4.kicker">Kontrol sende</p>
+          <h2 data-i="f4.title">Dil, bildirimler, gizlilik</h2>
+          <p data-i="f4.body">
+            Türkçe veya English. Fit, eşleşme, mesaj ve yakındaki yeni
+            adaylar için bildirimleri ayrı ayrı açıp kapat. Reklam SDK’sı yok.
+          </p>
+        </div>
+        <figure class="phone">
+          <img
+            src="assets/settings-430.webp"
+            srcset="assets/settings-430.webp 430w, assets/settings-860.webp 860w"
+            sizes="(max-width: 860px) 280px, 320px"
+            data-i-alt="alt.settings"
+            alt="Spotter ayarlar ekranı"
+            width="430"
+            height="932"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <section class="trust" id="trust">
+      <h2 data-i="trust.title">Güven, gizlilik, kim yapıyor</h2>
+      <div class="card-grid">
+        <article>
+          <h3 data-i="trust.team.title">Kim geliştiriyor</h3>
+          <p data-i="trust.team.body">
+            Spotter, LetSpotter markası altında bağımsız geliştirilen bir
+            üründür (bundle: com.letspotter.app). Destek:
+            hello@letspotter.com. Ürün Türkiye’de başlar; dil olarak Türkçe ve
+            İngilizce sunulur.
+          </p>
+        </article>
+        <article>
+          <h3 data-i="trust.sec.title">Güvenlik</h3>
+          <p data-i="trust.sec.body">
+            Giriş e-posta doğrulama veya Google ile. Veri HTTPS üzerinden
+            iletilir. Sohbet ve profiller hesaba bağlıdır. Engelle, raporla ve
+            eşleşmeyi kaldır her zaman elinin altında.
+          </p>
+        </article>
+        <article>
+          <h3 data-i="trust.priv.title">Gizlilik özeti</h3>
+          <p data-i="trust.priv.body">
+            Konum yalnızca yakındaki adaylar için. Reklam takibi yok. Toplanan
+            veriler: e-posta, isim, fotoğraf, konum, bio ve sohbet — hepsi
+            uygulama işlevi için. Ayrıntılar gizlilik sayfasında.
+          </p>
+          <a class="text-link" href="privacy.html" data-i="trust.priv.link">Gizlilik politikasını oku</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2 data-i="faq.title">Sık sorulanlar</h2>
+      <details open>
+        <summary data-i="faq.q1">Dating uygulaması mı?</summary>
+        <p data-i="faq.a1">
+          Hayır. Spotter fitness ve antrenman arkadaşlığı içindir. Odak: spor,
+          hedef, program ve sağlık. Flört ürünü olarak tasarlanmadı.
         </p>
-        <a
-          class="store"
-          href="https://apps.apple.com"
-          rel="noopener noreferrer"
-          data-i="dl.store"
-        >
-          App Store
-        </a>
-      </section>
-    </main>
+      </details>
+      <details>
+        <summary data-i="faq.q2">Kimler için?</summary>
+        <p data-i="faq.a2">
+          18 yaşını doldurmuş, aktif spor yapan veya spora başlamak isteyen
+          yetişkinler. Başlangıç seviyesinden ileri seviyeye kadar profiller
+          seviyesini belirtir.
+        </p>
+      </details>
+      <details>
+        <summary data-i="faq.q3">Konum neden gerekir?</summary>
+        <p data-i="faq.a3">
+          Keşfet yakındaki adayları gösterir; birlikte antrenman fiziksel
+          yakınlık ister. Konum reklam için kullanılmaz. İzni reddedersen
+          Keşfet çalışmaz.
+        </p>
+      </details>
+      <details>
+        <summary data-i="faq.q4">Bölgede kimse yoksa?</summary>
+        <p data-i="faq.a4">
+          Davet bağlantısıyla arkadaşlarını çağırabilirsin. Yoğunluk gerçek
+          kullanıcılardan gelir; sahte hesap doldurulmaz.
+        </p>
+      </details>
+      <details>
+        <summary data-i="faq.q5">Verilerim güvende mi?</summary>
+        <p data-i="faq.a5">
+          Hesap, profil ve sohbet verisi uygulama altyapısında (Supabase)
+          tutulur. Üçüncü taraf reklam ağı yok. Ayrıntı için gizlilik
+          politikasına bak.
+        </p>
+      </details>
+    </section>
 
-    <footer>
-      <span>© 2026 Spotter</span>
-      <a href="privacy.html" data-i="footer.privacy">Gizlilik</a>
-      <a href="mailto:hello@letspotter.com">hello@letspotter.com</a>
-    </footer>
+    <section class="download" id="download">
+      <h2 data-i="dl.title">Birlikte antrenman yap.</h2>
+      <p data-i="dl.body">
+        iOS sürümü App Store’da yayınlanmak üzere. Android yolda. Ücretsiz.
+      </p>
+      <a class="store" href="https://apps.apple.com" rel="noopener noreferrer" data-i="dl.store">
+        App Store
+      </a>
+    </section>
+  </main>
 
-    <script src="i18n.js"></script>
-  </body>
+  <footer>
+    <span data-i="footer.copy">© 2026 LetSpotter</span>
+    <a href="privacy.html" data-i="footer.privacy">Gizlilik</a>
+    <a href="mailto:hello@letspotter.com">hello@letspotter.com</a>
+  </footer>
+
+  </footer>
+</body>
+
 </html>

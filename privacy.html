@@ -3,8 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gizlilik — Spotter</title>
-    <link rel="icon" href="assets/favicon.png" />
+    <title>Spotter Gizlilik Politikası: Toplanan Veriler ve Konum</title>
+    <meta
+      name="description"
+      content="Spotter hangi verileri neden toplar, konumu nasıl kullanır ve reklam takibi yapmaz. Hesap, profil, sohbet, silme hakkı; üçüncü taraf reklam ağı yok."
+    />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="canonical" href="https://letspotter.com/privacy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Spotter" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://letspotter.com/privacy" />
+    <meta
+      property="og:title"
+      content="Spotter Gizlilik Politikası: Toplanan Veriler ve Konum"
+    />
+    <meta
+      property="og:description"
+      content="Spotter hangi verileri neden toplar, konumu nasıl kullanır ve reklam takibi yapmaz. Hesap, profil, sohbet, silme hakkı; üçüncü taraf reklam ağı yok."
+    />
+    <meta
+      property="og:image"
+      content="https://letspotter.com/assets/icon.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Spotter Gizlilik Politikası: Toplanan Veriler ve Konum"
+    />
+    <meta
+      name="twitter:description"
+      content="Spotter hangi verileri neden toplar, konumu nasıl kullanır ve reklam takibi yapmaz. Hesap, profil, sohbet, silme hakkı; üçüncü taraf reklam ağı yok."
+    />
+    <meta
+      name="twitter:image"
+      content="https://letspotter.com/assets/icon.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,43 +52,140 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json" id="schema-graph">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://letspotter.com/#org",
+            "name": "LetSpotter",
+            "url": "https://letspotter.com",
+            "email": "hello@letspotter.com",
+            "logo": "https://letspotter.com/assets/icon.png"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://letspotter.com/privacy#webpage",
+            "url": "https://letspotter.com/privacy",
+            "name": "Spotter Gizlilik Politikası: Toplanan Veriler ve Konum",
+            "description": "Spotter hangi verileri neden toplar, konumu nasıl kullanır ve reklam takibi yapmaz.",
+            "inLanguage": "tr",
+            "isPartOf": { "@id": "https://letspotter.com/#website" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="nav">
       <a class="brand" href="index.html">
-        <img src="assets/icon.png" alt="" width="36" height="36" />
+        <img src="assets/icon.png" alt="Spotter" width="36" height="36" />
         <span>SPOTTER</span>
       </a>
-      <a class="btn btn-sm" href="index.html">Ana sayfa</a>
+      <div class="nav-end">
+        <button class="lang" type="button" id="lang-toggle" data-i-aria="lang.aria" aria-label="Dil">
+          EN
+        </button>
+        <a class="btn btn-sm" href="index.html" data-i="footer.home">Ana sayfa</a>
+      </div>
     </header>
-    <article class="legal">
-      <h1>Gizlilik</h1>
-      <p>Son güncelleme: 14 Ağustos 2026</p>
+
+    <article class="legal" data-lang="tr">
+      <h1>Gizlilik politikası</h1>
+      <p>Son güncelleme: 16 Ağustos 2026 · LetSpotter · hello@letspotter.com</p>
+
+      <h2>Kapsam</h2>
       <p>
-        Spotter, antrenman partneri bulmak için hesap, profil ve konum
-        bilgilerini kullanır. Reklam SDK’sı veya üçüncü taraf takip
-        kullanılmaz.
+        Bu politika, Spotter mobil uygulaması ve letspotter.com için geçerlidir.
+        Spotter bir antrenman arkadaşı eşleşme ürünüdür; reklam ağı veya üçüncü
+        taraf izleme yazılımı kullanmaz.
       </p>
-      <p>Toplanan veriler (hesaba bağlı):</p>
+
+      <h2>Toplanan veriler ve amaç</h2>
       <ul>
-        <li>E-posta — hesap</li>
-        <li>İsim ve fotoğraflar — profil</li>
-        <li>Hassas konum — Keşfet (yakındaki adaylar)</li>
-        <li>Kullanıcı içeriği (bio, sohbet) — uygulama işlevi</li>
-        <li>Kullanıcı kimliği — hesap</li>
+        <li><strong>E-posta</strong> — hesap oluşturma ve giriş.</li>
+        <li><strong>İsim, fotoğraf, hakkında yazısı, spor, hedef, program, cinsiyet, yaş</strong> — profil ve eşleşme.</li>
+        <li><strong>Hassas konum</strong> — Keşfet’te yakındaki adayları göstermek. Reklam veya profilleme için kullanılmaz.</li>
+        <li><strong>Sohbet içeriği</strong> — eşleşmeler arası mesajlaşma.</li>
+        <li><strong>Kullanıcı kimliği</strong> — hesabı bağlamak.</li>
+        <li><strong>Bildirim jetonu</strong> — beğeni, eşleşme, mesaj ve yakındakiler uyarıları (tercihine göre).</li>
       </ul>
+      <p>Bu veriler hesaba bağlıdır. Reklam amaçlı izleme yapılmaz.</p>
+
+      <h2>Altyapı ve üçüncü taraflar</h2>
       <p>
-        Altyapı: Supabase (auth, veritabanı, depolama). Giriş: e-posta veya
-        Google Sign-In.
+        Kimlik doğrulama, veritabanı ve dosya depolama için Supabase kullanılır.
+        İsteğe bağlı giriş: Google. İletim şifreli bağlantı iledir. Apple
+        Uygulama Mağazası dağıtımı Apple’ın kendi gizlilik kurallarına tabidir.
       </p>
+
+      <h2>Saklama ve silme</h2>
       <p>
-        Sorular için: <a href="mailto:hello@letspotter.com">hello@letspotter.com</a>
+        Hesabını sildiğinde profil ve ilişkili içerik kaldırılır (yasal saklama
+        yükümlülüğü yoksa). Destek talepleri hello@letspotter.com üzerinden
+        iletilir.
       </p>
+
+      <h2>Güvenlik önlemleri</h2>
       <p>
-        Privacy (EN): Spotter uses account, profile, and location data to
-        match workout partners. No ad SDKs or third-party tracking. Contact
+        E-posta doğrulama veya Google hesabı. Erişim kuralları: kullanıcı
+        yalnızca kendi verisini ve eşleşme bağlamındaki sohbeti görür.
+        Engelleme, raporlama ve eşleşmeyi kaldırma uygulama içindedir. İlk
+        buluşmayı kamuya açık yerde yapmanızı öneririz.
+      </p>
+
+      <h2>Çocuklar</h2>
+      <p>Spotter 18 yaş altı kullanıcılar için değildir.</p>
+    </article>
+
+    <article class="legal" data-lang="en" hidden>
+      <h1>Privacy policy</h1>
+      <p>Last updated: 16 August 2026 · LetSpotter · hello@letspotter.com</p>
+
+      <h2>Scope</h2>
+      <p>
+        This policy covers the Spotter mobile app and letspotter.com. Spotter
+        is a workout-partner matching product. It does not use ad networks or
+        third-party tracking software.
+      </p>
+
+      <h2>Data we collect and why</h2>
+      <ul>
+        <li><strong>Email</strong> — account and sign-in.</li>
+        <li><strong>Name, photos, about text, sports, goals, schedule, gender, age</strong> — profile and matching.</li>
+        <li><strong>Precise location</strong> — to show nearby people in Discover. Not used for ads or profiling.</li>
+        <li><strong>Chat content</strong> — messages between matches.</li>
+        <li><strong>User ID</strong> — to attach the account.</li>
+        <li><strong>Notification token</strong> — like, match, message, and nearby alerts (per your preferences).</li>
+      </ul>
+      <p>This data is linked to the account. There is no advertising tracking.</p>
+
+      <h2>Infrastructure and third parties</h2>
+      <p>
+        Authentication, database, and file storage use Supabase. Optional
+        sign-in: Google. Transit is encrypted. App Store distribution follows
+        Apple’s privacy rules.
+      </p>
+
+      <h2>Retention and deletion</h2>
+      <p>
+        When you delete your account, the profile and related content are
+        removed unless we must keep records by law. Support:
         hello@letspotter.com.
       </p>
+
+      <h2>Safety</h2>
+      <p>
+        Email verification or a Google account. Access rules: you only see
+        your own data and chat in a match. Block, report, and unmatch are in
+        the app. We suggest public places for the first meetup.
+      </p>
+
+      <h2>Children</h2>
+      <p>Spotter is not for users under 18.</p>
     </article>
+
+    <script src="i18n.js"></script>
   </body>
 </html>
