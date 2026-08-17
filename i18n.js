@@ -2,7 +2,7 @@ const copy = {
   tr: {
     "doc.title": "Spotter Uygulaması: Yakınında Antrenman Arkadaşı Bul",
     "doc.description":
-      "Yakınındaki sporcularla eşleş, spor ve programına uygun antrenman arkadaşı bul. Birlikte spor yap, motivasyonunu koru. Spotter tanışma uygulaması değil.",
+      "Yakınındaki sporcularla eşleş veya etkinliğe katıl. Antrenman arkadaşı bul, grup sohbeti aç, birlikte spor yap. Spotter tanışma uygulaması değil.",
     "privacy.title": "Spotter Gizlilik Politikası: Toplanan Veriler ve Konum",
     "privacy.description":
       "Spotter hangi verileri neden toplar, konumu nasıl kullanır ve reklam takibi yapmaz. Hesap, profil, sohbet, silme hakkı; üçüncü taraf reklam ağı yok.",
@@ -16,16 +16,16 @@ const copy = {
     "hero.eyebrow": "Spor topluluğu · birlikte antrenman",
     "hero.title": "Keşfet. Eşleş. Antrenman.",
     "hero.lede":
-      "Tek başına spor sıkıcı geliyorsa Spotter, aynı sporları, hedefleri ve programı paylaşan insanlarla seni buluşturur. Motivasyon ve disiplin için birlikte antrenman yaparsınız. Tanışma uygulaması değil — antrenman arkadaşlığı.",
+      "Tek başına spor sıkıcı geliyorsa Spotter, aynı sporları, hedefleri ve programı paylaşan insanlarla seni buluşturur. Eşleş veya yakındaki etkinliğe katıl; birlikte antrenman yap. Tanışma uygulaması değil.",
     "hero.more":
-      "Keşfet’te yakındaki sporcuları görür, uymayanı geçersin, uyanı beğenirsin. Karşılıklı beğeni olunca sohbet açılır; salon, saat ve tempo konuşulur. Amaç flört değil, birlikte spor yapmak ve performansı artırmaktır.",
+      "Keşfet’te yakındaki sporcuları gör. Etkinlikler’de koşu, salon veya grup seansına katıl ya da kendi antrenmanını yayınla. Karşılıklı beğeni veya katılım olunca sohbet açılır.",
     "story.title": "Tek başına spor yetmiyorsa",
     "story.p1":
       "Tek başına spor sıkıcı geliyorsa Spotter, aynı sporları, hedefleri ve programı paylaşan insanlarla seni buluşturur. Bu cümle ürünün özüdür: doğru insan, doğru saat, doğru salon.",
     "story.p2":
       "Birçok kişi salona üye olur, birkaç hafta gider, sonra program bozulur. Arkadaşların mesaisi uymaz; gruplarda seviye belirsizdir. Spotter’da profilin sporlarını, seviyeni, hedeflerini ve müsait olduğun günleri taşır. Keşfet bu bilgilere ve konuma göre yakındaki sporcuları gösterir.",
     "story.p3":
-      "Eşleşme karşılıklıdır. Birini beğenirsin; o da seni beğenirse sohbet açılır. Mesajlar antrenmanı planlamak içindir: nerede, kaçta, hangi tempo. İlk buluşmayı kamuya açık bir yerde yapmanı öneririz. İstemezsen eşleşmeyi kaldırabilir, kişiyi engelleyebilir veya raporlayabilirsin.",
+      "Eşleşme karşılıklıdır. Ayrıca yakındaki etkinliğe katılabilir veya kendi seansını yayınlayabilirsin. Mesajlar antrenmanı planlamak içindir. İlk buluşmayı kamuya açık yerde yapmanı öneririz.",
     "story.p4":
       "Spotter tanışma uygulaması değildir. Odak sağlık, motivasyon, disiplin ve performans artışıdır. Fitness, koşu, yoga, boks, bisiklet veya saha sporları: kartında ne yazıyorsa ona göre eşleşirsin. Bölgede kimse yoksa davet bağlantısıyla gerçek insanları çağırırsın; sahte hesap doldurulmaz.",
     "hero.cta": "Uygulama Mağazası’nda yakında",
@@ -46,26 +46,32 @@ const copy = {
       "Yeni şehir, yeni salon veya yeni bir spor dalı: spor topluluğuna bağlanmak hem sağlık hem çevre için işe yarar. Grup antrenmanı da, ikili çalışma da mümkün.",
     "how.title": "Nasıl çalışır",
     "how.lede":
-      "Üç adım: profilini kur, yakındaki sporcuları keşfet, karşılıklı ilgi olunca sohbet et ve antrenmanı planla.",
+      "Dört adım: keşfet, eşleş, etkinliğe katıl veya oluştur, birlikte antrenman yap.",
     "how.find.title": "Keşfet",
     "how.find.body":
       "Konumuna, sporlarına ve müsaitliğine göre yakındaki sporcuları gör. Uymayanı geç, uyanı beğen.",
     "how.match.title": "Eşleş",
     "how.match.body":
       "İkiniz de beğenince eşleşme oluşur. Tek taraflı beğeni sohbet açmaz; karşılıklılık kuralı nettir.",
+    "how.events.title": "Etkinlik",
+    "how.events.body":
+      "Yakındaki koşu, salon veya grup antrenmanına katıl. İstersen kendi seansını yayınla; kontenjan ve saat sende.",
     "how.train.title": "Antrenman",
     "how.train.body":
       "Salonda, parkurda veya açık havada buluşun. İlk buluşmayı kamuya açık yerde planlamanızı öneririz.",
     "journey.title": "Uygulama içinde ne beklemelisin",
     "journey.profile.title": "1. Profil oluşturma",
     "journey.profile.body":
-      "Kayıt (e-posta veya Google) sonrası kurulum: 1–6 fotoğraf (ilki kapak), isim, cinsiyet, hakkında yazısı, sporlar ve seviyeler (başlangıç / orta / ileri), hedefler ve haftalık müsaitlik. Konum izni Keşfet için gerekir. Yaş sınırı 18.",
+      "Kayıt (e-posta veya Google) sonrası kurulum: 1–6 fotoğraf (ilki kapak), isim, cinsiyet, hakkında yazısı, sporlar ve seviyeler (başlangıç / orta / ileri), hedefler ve haftalık müsaitlik. Konum izni Keşfet ve Etkinlikler için gerekir. Yaş sınırı 18.",
     "journey.match.title": "2. Eşleşme süreci",
     "journey.match.body":
-      "Keşfet kartlarında geç veya beğen. Filtrelerle mesafe, yaş, cinsiyet tercihi, spor ve saat aralığını daraltırsın. Biri seni beğenince bildirim alırsın. Karşılıklı beğeni olunca eşleşmeler listesinde görünür; henüz yazılmamış yeni eşleşmelere selam verebilirsin.",
-    "journey.chat.title": "3. Sohbet",
+      "Keşfet kartlarında geç veya beğen. Filtrelerle mesafe, yaş, cinsiyet tercihi, spor ve saat aralığını daraltırsın. Karşılıklı beğeni olunca eşleşmeler listesinde görünür.",
+    "journey.events.title": "3. Etkinlikler",
+    "journey.events.body":
+      "Sana yakın spor etkinliklerini gör. Bugün, yarın, hafta sonu; spora göre filtrele. Katıl veya kendi etkinliğini yayınla. Kontenjan, konum ve kimlerin katılabileceği kartta yazılır.",
+    "journey.chat.title": "4. Sohbet",
     "journey.chat.body":
-      "Mesajlar yalnızca eşleşmeden sonra açılır. Konu: saat, salon, tempo — antrenmanı planlamak. Anlık sohbet. İstersen eşleşmeyi kaldırabilir, kişiyi engelleyebilir veya raporlayabilirsin.",
+      "Eşleşmeden sonra bire bir sohbet. Etkinliğe katılınca grup sohbeti. Konu: saat, salon, tempo. İstersen eşleşmeyi kaldırabilir, kişiyi engelleyebilir veya raporlayabilirsin.",
     "sports.title": "Hangi sporlar",
     "sports.lede":
       "Spotter tek bir branşa kilitli değil. Aynı salonu, aynı parkuru veya aynı minderi arayan insanları bir araya getirir.",
@@ -87,22 +93,26 @@ const copy = {
     "sports.team.title": "Yüzme, tenis, basketbol, futbol",
     "sports.team.body":
       "Kort, havuz veya saha. Grup antrenmanı veya ikili çalışma — spor kartında ne yazıyorsa ona göre eşleşirsin.",
-    "f1.kicker": "Eşleşmeler",
-    "f1.title": "Kim beğendi, kimle eşleştin",
+    "f1.kicker": "Etkinlikler",
+    "f1.title": "Yakındaki spor etkinliklerini gör",
     "f1.body":
-      "Gelen beğeniler ayrı bir listede durur; henüz yazılmamış eşleşmelerde «Selam ver» ile sohbeti başlatırsın. Motivasyon tek başına kalmasın diye eşleşmeyi görünür ve hızlı tutuyoruz.",
-    "f2.kicker": "Mesajlar",
-    "f2.title": "Eşleşmeden sonra anlık sohbet",
+      "Bugün, yarın veya hafta sonu. Koşu, fitness ve diğer branşlar. Konum, mesafe, kontenjan — katıl veya kendi seansını yayınla.",
+    "f2.kicker": "Katıl",
+    "f2.title": "Tarih, yer, kontenjan, organizatör",
     "f2.body":
-      "Saat, salon, tempo. Sohbet yalnızca karşılıklı beğeni sonrası açılır. Odak flört değil; antrenmanı planlamak ve performansı birlikte artırmak.",
-    "f3.kicker": "Profil",
-    "f3.title": "Spor, hedef, program, fotoğraf",
+      "Seviye, yaş ve cinsiyet koşullarını gör. Anında katıl veya gruba gir. Haritada konumu aç. İlk buluşmayı kamuya açık yerde öneririz.",
+    "f3.kicker": "Oluştur",
+    "f3.title": "Kendi antrenmanını yayınla",
     "f3.body":
-      "En fazla altı fotoğraf; ilki kapak. Sporlar ve seviyeler, hedefler (kas, kilo, kondisyon, yarışma, tempo) ve hangi gün hangi saatte müsait olduğun. Filtrelerle mesafeyi, yaşı ve sporu daraltırsın.",
-    "f4.kicker": "Kontrol sende",
-    "f4.title": "Dil, bildirimler, gizlilik",
+      "Başlık, açıklama, spor, tarih ve saat. Sahil koşusu, salon seansı veya grup antrenmanı — kontenjan sende.",
+    "f4.kicker": "Mesajlar",
+    "f4.title": "Eşleşme sohbeti ve etkinlik grupları",
     "f4.body":
-      "Türkçe veya İngilizce. Beğeni, eşleşme, mesaj ve yakındaki yeni adaylar için bildirimleri ayrı ayrı açıp kapat. Reklam yazılımı yok.",
+      "Bire bir sohbet eşleşmeden sonra açılır. Etkinliğe katılınca grup sohbeti gelir. Odak: antrenmanı planlamak, flört değil.",
+    "f5.kicker": "Eşleşmeler",
+    "f5.title": "Kim beğendi, kimle eşleştin",
+    "f5.body":
+      "Gelen beğeniler ayrı durur. Yeni eşleşmeye selam ver. Motivasyon tek başına kalmasın.",
     "trust.title": "Güven, gizlilik, kim yapıyor",
     "trust.team.title": "Kim geliştiriyor",
     "trust.team.body":
@@ -130,6 +140,9 @@ const copy = {
     "faq.q5": "Verilerim güvende mi?",
     "faq.a5":
       "Hesap, profil ve sohbet verisi uygulama sunucularında tutulur. Üçüncü taraf reklam ağı yok. Ayrıntı için gizlilik politikasına bak.",
+    "faq.q6": "Etkinlik nedir?",
+    "faq.a6":
+      "Yakındaki spor seansları: katıl veya kendin oluştur. Koşu, salon, grup antrenmanı. Katılınca grup sohbeti açılır.",
     "dl.title": "Birlikte antrenman yap.",
     "dl.body":
       "iPhone sürümü Apple Uygulama Mağazası’nda yayınlanmak üzere. Android yolda. Ücretsiz.",
@@ -138,14 +151,19 @@ const copy = {
     "footer.copy": "© 2026 LetSpotter",
     "footer.home": "Ana sayfa",
     "alt.matches": "Spotter eşleşmeler ekranı: gelen beğeniler ve yeni eşleşmeler",
-    "alt.messages": "Spotter mesajlar ekranı: antrenman planı sohbetleri",
-    "alt.profile": "Spotter profil düzenleme: fotoğraflar, isim, cinsiyet, hakkında",
-    "alt.settings": "Spotter ayarlar: dil ve bildirim tercihleri",
+    "alt.messages": "Spotter mesajlar: sohbetler ve etkinlik grupları",
+    "alt.events": "Spotter etkinlikler: yakındaki spor seansları",
+    "alt.eventDetail": "Spotter etkinlik detayı: tarih, yer, kontenjan",
+    "alt.eventCreate": "Spotter etkinlik oluşturma formu",
   },
   en: {
     "doc.title": "Spotter Fitness App: Find Training Partners Nearby",
     "doc.description":
-      "Match with athletes nearby by sport, goals, and schedule. Find a training partner, chat after a match, and train together. Spotter is not a dating app.",
+      "Match nearby or join a workout event. Find a training partner, open group chat, train together. Spotter is not a dating app.",
+    "hero.lede":
+      "If training alone feels dull, Spotter connects you with people who share your sports, goals, and schedule. Match or join a nearby event. Not a dating app — training companionship.",
+    "hero.more":
+      "Discover athletes nearby. In Events, join a run, gym session, or group workout — or publish your own. Chat opens after a mutual like or after you join.",
     "privacy.title": "Spotter Privacy Policy: Collected Data and Location",
     "privacy.description":
       "What Spotter collects, why we use location, and that there is no ad tracking. Account, profile, chat, deletion, and that we use no third-party ad network.",
@@ -158,17 +176,13 @@ const copy = {
     "nav.cta": "Get the app",
     "hero.eyebrow": "Fitness community · train together",
     "hero.title": "Find. Match. Train.",
-    "hero.lede":
-      "If training alone feels dull, Spotter connects you with people who share your sports, goals, and schedule. You train together for motivation and discipline. Not a dating app — training companionship.",
-    "hero.more":
-      "In Discover you see athletes nearby, skip who does not fit, and like who does. When the like is mutual, chat opens: gym, time, pace. The point is not dating — it is training together and raising performance.",
     "story.title": "When training alone is not enough",
     "story.p1":
       "If training alone feels dull, Spotter connects you with people who share your sports, goals, and schedule. That is the product: the right person, the right hour, the right gym.",
     "story.p2":
       "Plenty of people join a gym, go for a few weeks, then the routine breaks. Friends’ hours do not match; group chats hide skill level. On Spotter your profile carries sports, level, goals, and the days you are free. Discover uses that plus location to show athletes nearby.",
     "story.p3":
-      "Matching is mutual. You like someone; if they like you back, chat opens. Messages are for planning the session: where, when, what pace. We suggest a public place for the first meetup. You can unmatch, block, or report at any time.",
+      "Matching is mutual. You can also join a nearby event or host your own session. Messages are for planning the workout. We suggest a public place for the first meetup.",
     "story.p4":
       "Spotter is not a dating app. The focus is health, motivation, discipline, and better performance. Fitness, running, yoga, boxing, cycling, or field sports: you match on what you list. If your area is quiet, invite real people — we do not fill the map with fake accounts.",
     "hero.cta": "Coming to the App Store",
@@ -189,26 +203,32 @@ const copy = {
       "New city, new gym, or a new sport: joining a fitness community helps both health and your social circle. Pair work or group training — both work.",
     "how.title": "How it works",
     "how.lede":
-      "Three steps: set up your profile, discover athletes nearby, chat when interest is mutual, and plan the session.",
+      "Four steps: discover, match, join or host an event, then train together.",
     "how.find.title": "Discover",
     "how.find.body":
       "See athletes nearby by location, sports, and availability. Skip if it is not a match; like if it is.",
     "how.match.title": "Match",
     "how.match.body":
       "When you both like each other, you match. One-sided interest does not unlock chat — mutual consent is the rule.",
+    "how.events.title": "Events",
+    "how.events.body":
+      "Join a nearby run, gym session, or group workout — or publish your own. Spots and time are on the card.",
     "how.train.title": "Train",
     "how.train.body":
       "Meet at the gym, on a route, or outdoors. We suggest public places for the first meetup.",
     "journey.title": "What to expect in the app",
     "journey.profile.title": "1. Create a profile",
     "journey.profile.body":
-      "After sign-up (email or Google), setup covers 1–6 photos (first is cover), name, gender, about text, sports and levels (beginner / intermediate / advanced), goals, and weekly availability. Location is required for Discover. Minimum age 18.",
+      "After sign-up (email or Google), setup covers 1–6 photos (first is cover), name, gender, about text, sports and levels (beginner / intermediate / advanced), goals, and weekly availability. Location is required for Discover and Events. Minimum age 18.",
     "journey.match.title": "2. Matching",
     "journey.match.body":
-      "Skip or like on Discover cards. Filters for distance, age, gender preference, sports, and time slots. You get a notification when someone likes you. Mutual likes land in Matches; you can say hi to new matches you have not messaged yet.",
-    "journey.chat.title": "3. Chat",
+      "Skip or like on Discover cards. Filters for distance, age, gender preference, sports, and time slots. Mutual likes land in Matches.",
+    "journey.events.title": "3. Events",
+    "journey.events.body":
+      "See workouts near you. Filter by today, tomorrow, weekend, or sport. Join or publish your own. Capacity, place, and who can join are on the card.",
+    "journey.chat.title": "4. Chat",
     "journey.chat.body":
-      "Messages open only after a match. The topic is time, gym, pace — planning the workout. Live chat. You can unmatch, block, or report at any time.",
+      "One-to-one chat after a match. Group chat after you join an event. The topic is time, gym, pace. You can unmatch, block, or report at any time.",
     "sports.title": "Which sports",
     "sports.lede":
       "Spotter is not locked to one discipline. It brings together people looking for the same gym, route, or mat.",
@@ -230,22 +250,26 @@ const copy = {
     "sports.team.title": "Swimming, tennis, basketball, football",
     "sports.team.body":
       "Court, pool, or pitch. Pair work or group training — you match on whatever you list.",
-    "f1.kicker": "Matches",
-    "f1.title": "Who liked you, who you matched",
+    "f1.kicker": "Events",
+    "f1.title": "See workouts happening nearby",
     "f1.body":
-      "Incoming likes sit in their own list. On new matches you have not messaged yet, tap Say hi. We keep matching visible and fast so motivation does not stall.",
-    "f2.kicker": "Messages",
-    "f2.title": "Live chat after a match",
+      "Today, tomorrow, or this weekend. Running, fitness, and more. Distance, spots, location — join or host your own session.",
+    "f2.kicker": "Join",
+    "f2.title": "Date, place, capacity, organizer",
     "f2.body":
-      "Time, gym, pace. Chat opens only after a mutual like. The point is not dating — it is planning the session and lifting performance together.",
-    "f3.kicker": "Profile",
-    "f3.title": "Sports, goals, schedule, photos",
+      "See level, age, and gender rules. Join instantly or open the group. Show the spot on the map. We suggest public places for the first meetup.",
+    "f3.kicker": "Host",
+    "f3.title": "Publish your own session",
     "f3.body":
-      "Up to six photos; the first is cover. Sports and levels, goals (muscle, weight, endurance, competition, pace), and when you are free. Filter by distance, age, and sport.",
-    "f4.kicker": "You are in control",
-    "f4.title": "Language, notifications, privacy",
+      "Title, description, sport, date, and time. A coastal run, gym session, or group workout — you set the spots.",
+    "f4.kicker": "Messages",
+    "f4.title": "Match chat and event groups",
     "f4.body":
-      "Turkish or English. Toggle like, match, message, and nearby-candidate alerts independently. No advertising software.",
+      "One-to-one chat after a match. Group chat after you join an event. The point is planning the workout, not dating.",
+    "f5.kicker": "Matches",
+    "f5.title": "Who liked you, who you matched",
+    "f5.body":
+      "Incoming likes sit in their own list. Say hi to a new match. Keep motivation from stalling.",
     "trust.title": "Trust, privacy, who builds this",
     "trust.team.title": "Who builds it",
     "trust.team.body":
@@ -273,6 +297,9 @@ const copy = {
     "faq.q5": "Is my data safe?",
     "faq.a5":
       "Account, profile, and chat live on the app servers. No third-party ad network. See the privacy policy for detail.",
+    "faq.q6": "What is an event?",
+    "faq.a6":
+      "Nearby workout sessions: join or host. Running, gym, group training. Joining unlocks a group chat.",
     "dl.title": "Train together.",
     "dl.body": "The iPhone version is heading to the App Store. Android is next. Free.",
     "dl.store": "App Store",
@@ -280,9 +307,10 @@ const copy = {
     "footer.copy": "© 2026 LetSpotter",
     "footer.home": "Home",
     "alt.matches": "Spotter matches screen: incoming likes and new matches",
-    "alt.messages": "Spotter messages screen: workout planning chats",
-    "alt.profile": "Spotter edit profile: photos, name, gender, about",
-    "alt.settings": "Spotter settings: language and notification preferences",
+    "alt.messages": "Spotter messages: chats and event groups",
+    "alt.events": "Spotter events: nearby workout sessions",
+    "alt.eventDetail": "Spotter event detail: date, place, capacity",
+    "alt.eventCreate": "Spotter create-event form",
   },
 };
 
@@ -323,19 +351,21 @@ function updateSchema(dict, currentLang, isPrivacy) {
         ? [
           "Yakındaki sporcuları keşfet",
           "Spor, hedef ve program eşleşmesi",
+          "Yakındaki spor etkinliklerine katıl veya oluştur",
+          "Etkinlik grup sohbeti",
           "Karşılıklı beğeniden sonra sohbet",
-          "Filtreler ve bildirim tercihleri",
         ]
         : [
           "Discover athletes nearby",
           "Match on sports, goals, and schedule",
+          "Join or host nearby workout events",
+          "Event group chat",
           "Chat after a mutual like",
-          "Filters and notification preferences",
         ];
   }
   if (faq) {
     faq.inLanguage = currentLang;
-    faq.mainEntity = [1, 2, 3, 4, 5].map((n) => ({
+    faq.mainEntity = [1, 2, 3, 4, 5, 6].map((n) => ({
       "@type": "Question",
       name: dict[`faq.q${n}`],
       acceptedAnswer: { "@type": "Answer", text: dict[`faq.a${n}`] },

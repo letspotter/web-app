@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Spotter Uygulaması: Yakınında Antrenman Arkadaşı Bul</title>
   <meta name="description"
-    content="Yakınındaki sporcularla eşleş, spor ve programına uygun antrenman arkadaşı bul. Birlikte spor yap, motivasyonunu koru. Spotter tanışma uygulaması değil." />
+    content="Yakınındaki sporcularla eşleş veya etkinliğe katıl. Antrenman arkadaşı bul, grup sohbeti aç, birlikte spor yap. Spotter tanışma uygulaması değil." />
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
@@ -21,16 +21,16 @@
   <meta property="og:url" content="https://letspotter.com/" />
   <meta property="og:title" content="Spotter Uygulaması: Yakınında Antrenman Arkadaşı Bul" />
   <meta property="og:description"
-    content="Yakınındaki sporcularla eşleş, spor ve programına uygun antrenman arkadaşı bul. Birlikte spor yap, motivasyonunu koru. Spotter tanışma uygulaması değil." />
+    content="Yakınındaki sporcularla eşleş veya etkinliğe katıl. Antrenman arkadaşı bul, grup sohbeti aç, birlikte spor yap. Spotter tanışma uygulaması değil." />
   <meta property="og:image" content="https://letspotter.com/assets/og.jpg" />
-  <meta property="og:image:alt" content="Spotter eşleşmeler ekranı" />
+  <meta property="og:image:alt" content="Spotter etkinlikler ekranı" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Spotter Uygulaması: Yakınında Antrenman Arkadaşı Bul" />
   <meta name="twitter:description"
-    content="Yakınındaki sporcularla eşleş, spor ve programına uygun antrenman arkadaşı bul. Birlikte spor yap, motivasyonunu koru. Spotter tanışma uygulaması değil." />
+    content="Yakınındaki sporcularla eşleş veya etkinliğe katıl. Antrenman arkadaşı bul, grup sohbeti aç, birlikte spor yap. Spotter tanışma uygulaması değil." />
   <meta name="twitter:image" content="https://letspotter.com/assets/og.jpg" />
-  <meta name="twitter:image:alt" content="Spotter eşleşmeler ekranı" />
-  <link rel="preload" as="image" type="image/webp" href="assets/messages-430.webp" fetchpriority="high" />
+  <meta name="twitter:image:alt" content="Spotter etkinlikler ekranı" />
+  <link rel="preload" as="image" type="image/webp" href="assets/events-430.webp" fetchpriority="high" />
   <link rel="preload" href="styles.css" as="style" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -106,16 +106,17 @@
             "url": "https://letspotter.com",
             "image": "https://letspotter.com/assets/icon-192.png",
             "screenshot": [
-              "https://letspotter.com/assets/matches-860.webp",
+              "https://letspotter.com/assets/events-860.webp",
+              "https://letspotter.com/assets/event-detail-860.webp",
               "https://letspotter.com/assets/messages-860.webp",
-              "https://letspotter.com/assets/profile-860.webp",
-              "https://letspotter.com/assets/settings-860.webp"
+              "https://letspotter.com/assets/matches-860.webp"
             ],
             "featureList": [
               "Yakındaki sporcuları keşfet",
               "Spor, hedef ve program eşleşmesi",
-              "Karşılıklı beğeniden sonra sohbet",
-              "Filtreler ve bildirim tercihleri"
+              "Yakındaki spor etkinliklerine katıl veya oluştur",
+              "Etkinlik grup sohbeti",
+              "Karşılıklı beğeniden sonra sohbet"
             ],
             "publisher": { "@id": "https://letspotter.com/#org" }
           },
@@ -182,8 +183,8 @@
     </a>
     <nav>
       <a href="#how" data-i="nav.how">Nasıl çalışır</a>
-      <a href="#sports" data-i="nav.sports">Sporlar</a>
       <a href="#app" data-i="nav.app">Uygulama</a>
+      <a href="#sports" data-i="nav.sports">Sporlar</a>
       <a href="#trust" data-i="nav.trust">Güven</a>
       <a href="#faq" data-i="nav.faq">SSS</a>
     </nav>
@@ -201,9 +202,8 @@
       <h1 data-i="hero.title">Keşfet. Eşleş. Antrenman yap.</h1>
       <p class="lede" data-i="hero.lede">
         Tek başına spor sıkıcı geliyorsa Spotter, aynı sporları, hedefleri ve
-        programı paylaşan insanlarla seni buluşturur. Motivasyon ve disiplin
-        için birlikte antrenman yaparsınız. Tanışma uygulaması değil —
-        antrenman arkadaşlığı.
+        programı paylaşan insanlarla seni buluşturur. Eşleş veya yakındaki
+        etkinliğe katıl; birlikte antrenman yap. Tanışma uygulaması değil.
       </p>
       <div class="hero-actions">
         <a class="btn" href="#download" data-i="hero.cta">App Store’da yakında</a>
@@ -228,8 +228,8 @@
         </figure>
         <figure class="phone phone-center">
           <img
-            src="assets/messages-430.webp"
-            srcset="assets/messages-430.webp 430w, assets/messages-860.webp 860w"
+            src="assets/events-430.webp"
+            srcset="assets/events-430.webp 430w, assets/events-860.webp 860w"
             sizes="(max-width: 860px) 280px, 360px"
             alt=""
             width="430"
@@ -240,8 +240,8 @@
         </figure>
         <figure class="phone phone-right">
           <img
-            src="assets/profile-430.webp"
-            srcset="assets/profile-430.webp 430w, assets/profile-860.webp 860w"
+            src="assets/messages-430.webp"
+            srcset="assets/messages-430.webp 430w, assets/messages-860.webp 860w"
             sizes="(max-width: 860px) 0px, 280px"
             alt=""
             width="430"
@@ -318,32 +318,35 @@
     <section class="steps" id="how">
       <h2 data-i="how.title">Nasıl çalışır</h2>
       <p class="section-lede" data-i="how.lede">
-        Üç adım: profilini kur, yakındaki sporcuları keşfet, karşılıklı
-        ilgi olunca sohbet et ve antrenmanı planla.
+        Dört adım: keşfet, eşleş, etkinliğe katıl veya oluştur, birlikte antrenman yap.
       </p>
       <div class="step-grid">
         <article>
           <span>01</span>
           <h3 data-i="how.find.title">Keşfet</h3>
           <p data-i="how.find.body">
-            Konumuna, sporlarına ve müsaitliğine göre yakındaki sporcuları
-            gör. Uymayanı geç (Pass), uyanı Fit ile işaretle.
+            Konumuna, sporlarına ve müsaitliğine göre yakındaki sporcuları gör. Uymayanı geç, uyanı beğen.
           </p>
         </article>
         <article>
           <span>02</span>
           <h3 data-i="how.match.title">Eşleş</h3>
           <p data-i="how.match.body">
-            İkiniz de Fit atınca eşleşme oluşur. Tek taraflı beğeni sohbet
-            açmaz; karşılıklılık kuralı nettir.
+            İkiniz de beğenince eşleşme oluşur. Tek taraflı beğeni sohbet açmaz.
           </p>
         </article>
         <article>
           <span>03</span>
+          <h3 data-i="how.events.title">Etkinlik</h3>
+          <p data-i="how.events.body">
+            Yakındaki koşu, salon veya grup antrenmanına katıl ya da kendin oluştur.
+          </p>
+        </article>
+        <article>
+          <span>04</span>
           <h3 data-i="how.train.title">Antrenman</h3>
           <p data-i="how.train.body">
-            Salonda, parkurda veya açık havada buluşun. İlk buluşmayı kamuya
-            açık yerde planlamanızı öneririz.
+            Salonda, parkurda veya açık havada buluşun. İlk buluşmayı kamuya açık yerde planlayın.
           </p>
         </article>
       </div>
@@ -372,12 +375,15 @@
           </p>
         </article>
         <article>
-          <h3 data-i="journey.chat.title">3. Sohbet</h3>
+          <h3 data-i="journey.events.title">3. Etkinlikler</h3>
+          <p data-i="journey.events.body">
+            Yakındaki spor etkinliklerini gör, filtrele, katıl veya kendi koşunu / salon seansını yayınla. Kontenjan, tarih, konum ve kimlerin katılabileceği net.
+          </p>
+        </article>
+        <article>
+          <h3 data-i="journey.chat.title">4. Sohbet</h3>
           <p data-i="journey.chat.body">
-            Mesajlar yalnızca eşleşmeden sonra açılır. Konu: saat, salon,
-            tempo — antrenmanı planlamak. Anlık (realtime) sohbet. İstersen
-            eşleşmeyi kaldırabilir, kişiyi engelleyebilir veya
-            raporlayabilirsin.
+            Eşleşmeden sonra bire bir sohbet; etkinliğe katılınca grup sohbeti. Konu: saat, salon, tempo. İstersen eşleşmeyi kaldır, kişiyi engelle veya raporla.
           </p>
         </article>
       </div>
@@ -438,21 +444,20 @@
     <section class="features" id="app">
       <div class="feature">
         <div class="feature-copy">
-          <p class="kicker" data-i="f1.kicker">Eşleşmeler</p>
-          <h2 data-i="f1.title">Kim Fit attı, kimle eşleştin</h2>
+          <p class="kicker" data-i="f1.kicker">Etkinlikler</p>
+          <h2 data-i="f1.title">Yakındaki spor etkinliklerini gör</h2>
           <p data-i="f1.body">
-            Gelen Fit’ler ayrı bir listede durur; henüz yazılmamış
-            eşleşmelerde “Selam ver” ile sohbeti başlatırsın. Motivasyon tek
-            başına kalmasın diye eşleşmeyi görünür ve hızlı tutuyoruz.
+            Bugün, yarın veya hafta sonu. Koşu, fitness ve diğer branşlar.
+            Konum, mesafe, kontenjan — katıl veya kendi seansını yayınla.
           </p>
         </div>
         <figure class="phone">
           <img
-            src="assets/matches-430.webp"
-            srcset="assets/matches-430.webp 430w, assets/matches-860.webp 860w"
+            src="assets/events-430.webp"
+            srcset="assets/events-430.webp 430w, assets/events-860.webp 860w"
             sizes="(max-width: 860px) 280px, 320px"
-            data-i-alt="alt.matches"
-            alt="Spotter eşleşmeler ekranı"
+            data-i-alt="alt.events"
+            alt="Spotter etkinlikler ekranı"
             width="430"
             height="932"
             loading="lazy"
@@ -463,12 +468,59 @@
 
       <div class="feature feature-flip">
         <div class="feature-copy">
-          <p class="kicker" data-i="f2.kicker">Mesajlar</p>
-          <h2 data-i="f2.title">Eşleşmeden sonra anlık sohbet</h2>
+          <p class="kicker" data-i="f2.kicker">Katıl</p>
+          <h2 data-i="f2.title">Tarih, yer, kontenjan, organizatör</h2>
           <p data-i="f2.body">
-            Saat, salon, tempo. Sohbet yalnızca karşılıklı Fit sonrası açılır.
-            Odak flört değil; antrenmanı planlamak ve performansı birlikte
-            artırmak.
+            Seviye, yaş ve cinsiyet koşullarını gör. Anında katıl veya gruba
+            gir. Haritada konumu aç. İlk buluşmayı kamuya açık yerde öneririz.
+          </p>
+        </div>
+        <figure class="phone">
+          <img
+            src="assets/event-detail-430.webp"
+            srcset="assets/event-detail-430.webp 430w, assets/event-detail-860.webp 860w"
+            sizes="(max-width: 860px) 280px, 320px"
+            data-i-alt="alt.eventDetail"
+            alt="Spotter etkinlik detayı"
+            width="430"
+            height="932"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+
+      <div class="feature">
+        <div class="feature-copy">
+          <p class="kicker" data-i="f3.kicker">Oluştur</p>
+          <h2 data-i="f3.title">Kendi antrenmanını yayınla</h2>
+          <p data-i="f3.body">
+            Başlık, açıklama, spor, tarih ve saat. Sahil koşusu, salon seansı
+            veya grup antrenmanı — kontenjan sende.
+          </p>
+        </div>
+        <figure class="phone">
+          <img
+            src="assets/event-create-430.webp"
+            srcset="assets/event-create-430.webp 430w, assets/event-create-860.webp 860w"
+            sizes="(max-width: 860px) 280px, 320px"
+            data-i-alt="alt.eventCreate"
+            alt="Spotter etkinlik oluşturma"
+            width="430"
+            height="932"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+
+      <div class="feature feature-flip">
+        <div class="feature-copy">
+          <p class="kicker" data-i="f4.kicker">Mesajlar</p>
+          <h2 data-i="f4.title">Eşleşme sohbeti ve etkinlik grupları</h2>
+          <p data-i="f4.body">
+            Bire bir sohbet eşleşmeden sonra açılır. Etkinliğe katılınca grup
+            sohbeti gelir. Odak: antrenmanı planlamak.
           </p>
         </div>
         <figure class="phone">
@@ -488,46 +540,20 @@
 
       <div class="feature">
         <div class="feature-copy">
-          <p class="kicker" data-i="f3.kicker">Profil</p>
-          <h2 data-i="f3.title">Spor, hedef, program, fotoğraf</h2>
-          <p data-i="f3.body">
-            En fazla altı fotoğraf; ilki kapak. Sporlar ve seviyeler,
-            hedefler (kas, kilo, kondisyon, yarışma, tempo…) ve hangi gün
-            hangi saatte müsait olduğun. Filtrelerle mesafeyi, yaşı ve sporu
-            daraltırsın.
+          <p class="kicker" data-i="f5.kicker">Eşleşmeler</p>
+          <h2 data-i="f5.title">Kim beğendi, kimle eşleştin</h2>
+          <p data-i="f5.body">
+            Gelen beğeniler ayrı durur. Yeni eşleşmeye selam ver. Motivasyon
+            tek başına kalmasın.
           </p>
         </div>
         <figure class="phone">
           <img
-            src="assets/profile-430.webp"
-            srcset="assets/profile-430.webp 430w, assets/profile-860.webp 860w"
+            src="assets/matches-430.webp"
+            srcset="assets/matches-430.webp 430w, assets/matches-860.webp 860w"
             sizes="(max-width: 860px) 280px, 320px"
-            data-i-alt="alt.profile"
-            alt="Spotter profil düzenleme ekranı"
-            width="430"
-            height="932"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-      </div>
-
-      <div class="feature feature-flip">
-        <div class="feature-copy">
-          <p class="kicker" data-i="f4.kicker">Kontrol sende</p>
-          <h2 data-i="f4.title">Dil, bildirimler, gizlilik</h2>
-          <p data-i="f4.body">
-            Türkçe veya English. Fit, eşleşme, mesaj ve yakındaki yeni
-            adaylar için bildirimleri ayrı ayrı açıp kapat. Reklam SDK’sı yok.
-          </p>
-        </div>
-        <figure class="phone">
-          <img
-            src="assets/settings-430.webp"
-            srcset="assets/settings-430.webp 430w, assets/settings-860.webp 860w"
-            sizes="(max-width: 860px) 280px, 320px"
-            data-i-alt="alt.settings"
-            alt="Spotter ayarlar ekranı"
+            data-i-alt="alt.matches"
+            alt="Spotter eşleşmeler ekranı"
             width="430"
             height="932"
             loading="lazy"
@@ -609,6 +635,13 @@
           politikasına bak.
         </p>
       </details>
+      <details>
+        <summary data-i="faq.q6">Etkinlik nedir?</summary>
+        <p data-i="faq.a6">
+          Yakındaki spor seansları: katıl veya kendin oluştur. Koşu, salon,
+          grup antrenmanı. Katılınca grup sohbeti açılır.
+        </p>
+      </details>
     </section>
 
     <section class="download" id="download">
@@ -626,8 +659,6 @@
     <span data-i="footer.copy">© 2026 LetSpotter</span>
     <a href="privacy.html" data-i="footer.privacy">Gizlilik</a>
     <a href="mailto:hello@letspotter.com">hello@letspotter.com</a>
-  </footer>
-
   </footer>
 </body>
 
